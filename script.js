@@ -50,12 +50,22 @@ const init = () => {
     submitButton.classList.remove('success')
     submitButton.classList.add('error')
     submitButton.textContent = 'Erro'
+
+    setTimeout(() => {
+      submitButton.classList.remove('error')
+      submitButton.textContent = 'Login'
+    }, 5000)
   }
 
   const successHandler = () => {
     submitButton.classList.remove('error')
     submitButton.classList.add('success')
     submitButton.textContent = 'Sent!'
+
+    setTimeout(() => {
+      submitButton.classList.remove('success')
+      submitButton.textContent = 'Login'
+    }, 5000)
   }
 
   if (submitButton) {
